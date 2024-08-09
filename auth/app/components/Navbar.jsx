@@ -81,7 +81,7 @@ export default function NavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Box className="h-15 w-full flex items-center justify-between p-2">
+          <Box className="bg-blue-600 h-15 w-full flex items-center justify-between p-2">
             <Box className="flex">
               <Typography
                 className="p-2 cursor-pointer"

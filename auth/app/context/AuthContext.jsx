@@ -1,3 +1,4 @@
+"use client"
 //managing state throughout the application
 import {useContext, createContext, useState, useEffect} from "react";
 import { signInWithPopup, signOut, onAuthStateChanged, GoogleAuthProvider } from "firebase/auth";

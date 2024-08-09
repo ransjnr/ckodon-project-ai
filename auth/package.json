@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,10 +14,12 @@
     "@mui/icons-material": "^5.16.6",
     "@mui/material": "^5.16.6",
     "axios": "^1.7.3",
+    "csv-parser": "^3.0.0",
     "docx": "^8.5.0",
     "encoding": "^0.1.13",
     "file-saver": "^2.0.5",
     "firebase": "^10.12.5",
+    "fs": "^0.0.1-security",
     "json2csv": "^6.0.0-alpha.2",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.2",

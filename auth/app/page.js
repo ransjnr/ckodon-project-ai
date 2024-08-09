@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { UserAuth } from "./context/AuthContext";
 import Button from "@mui/material/Button";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const HomePage = () => {
   const { user, googleSignIn } = UserAuth();
@@ -23,7 +24,7 @@ const HomePage = () => {
     if (!user) {
       handleSignIn();
     } else {
-      window.location.href = "/profile";
+      router.push("/profile");
     }
   };
 
@@ -57,31 +58,37 @@ const HomePage = () => {
 
       <section className="py-16 px-4">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">About Us</h2>
+          <h2 className="text-3xl font-bold mb-4">Features</h2>
           <p className="text-lg mb-8">
-            Our mission is to deliver top-notch services that cater to your
-            unique needs and exceed your expectations.
+            Explore the powerful features of CKODON Project AI designed to
+            assist you with your college application project drafting.
           </p>
           <div className="flex flex-wrap justify-center gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs">
-              <h3 className="text-xl font-semibold mb-2">Feature One</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Personalized Project Suggestions
+              </h3>
               <p>
-                Discover how our first feature can help streamline your workflow
-                and improve productivity.
+                Receive tailored project suggestions based on your intended
+                majors, minors, and personal interests to help you stand out in
+                your college applications.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs">
-              <h3 className="text-xl font-semibold mb-2">Feature Two</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Smart Drafting Assistant
+              </h3>
               <p>
-                Explore the second feature that enhances your experience with
-                its intuitive design.
+                Our intelligent assistant helps you draft and refine your
+                project proposals with ease, offering suggestions and
+                improvements to enhance your submission.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs">
-              <h3 className="text-xl font-semibold mb-2">Feature Three</h3>
+              <h3 className="text-xl font-semibold mb-2">Real-time Feedback</h3>
               <p>
-                Learn about our third feature that provides unmatched
-                performance and reliability.
+                Get immediate feedback on your project drafts, allowing you to
+                make necessary adjustments and submit a polished final proposal.
               </p>
             </div>
           </div>
