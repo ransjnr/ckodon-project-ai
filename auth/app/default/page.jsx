@@ -71,17 +71,9 @@ const Profile = () => {
       const userRef = doc(db, "users", user.uid);
       await setDoc(userRef, {
         category: formData.category,
-        // major: formData.major,
-        // bio: formData.bio,
       });
 
       setLoadingSuggestions(true);
-      const response = await axios.post("/api/fetch-suggestions/", {
-        category: formData.category,
-        // major: formData.major,
-        // bio: formData.bio,
-      });
-
       if (response.data && response.data.length > 0) {
         const formattedSuggestions = response.data
           .map(
@@ -104,8 +96,8 @@ const Profile = () => {
   const handleReset = () => {
     setFormData({
       category: "",
-      major: "",
-      bio: "",
+      // major: "",
+      // bio: "",
     });
     setSuggestions("");
     setOpenModal(false);
